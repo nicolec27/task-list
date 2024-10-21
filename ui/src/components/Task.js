@@ -14,24 +14,23 @@ export const Task = ({ task, fetchTasks }) => {
 
     const handleUpdateTaskCompletion = async () => {
         try {
-        await axios.put(API_URL, {
-            id,
-            name,
-            completed: !isComplete,
-        });
-        setIsComplete((prev) => !prev);
+            await axios.put(API_URL, {
+                id,
+                name,
+                completed: !isComplete,
+            });
+            setIsComplete((prev) => !prev);
         } catch (err) {
-        console.log(err);
+            console.log(err);
         }
     };
 
     const handleDeleteTask = async () => {
         try {
-        await axios.delete(`${API_URL}/${task.id}`);
-
-        await fetchTasks();
+            await axios.delete(`${API_URL}/${task.id}`);
+            await fetchTasks();
         } catch (err) {
-        console.log(err);
+            console.log(err);
         }
     };
 
