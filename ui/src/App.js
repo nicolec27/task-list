@@ -13,7 +13,7 @@ const darkTheme = createTheme({
 });
 
 export default function App() {
-  const [task, setTask] = useState([]);
+  const [tasks, setTasks] = useState([]);
 
   const fetchTasks = async () => {
     try {
