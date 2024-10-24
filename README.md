@@ -1,3 +1,5 @@
+FULL STACK
+
 AWS & React Project: Task List
 
 Developed using React.js, Node.js, Express.js
